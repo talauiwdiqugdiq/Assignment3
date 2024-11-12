@@ -1,20 +1,21 @@
 <%- include('../Partials/header'); -%> 
 <%- include('../Partials/main_nav'); -%> 
-
-<!--Survey Database--> 
-
 <main class="container my-5"> <!--creates a main container with margin-y of 5 for spacing-->
     <div class="row"> 
         <div class="col-md-12"> <!--creates a column that spans the full width on medium and larger screens-->
-            <!--indicates the section for the page title-->
+
+            <!-- Title -->
             <h1 class="text-center mb-3" style="color: #1a73e8; font-weight: bold;"><%= title %></h1> <!--displays the page title centered, with blue color and bold font-->
-            <!--indicates the section for the create button below the title-->
+
+            <!-- Create Button Aligned Left Under Title --> 
             <div class="mb-3"> <!--container with margin-bottom for spacing-->
                 <a href="/workoutlist/add" class="btn btn-success btn-sm" role="button" style="border-radius: 8px;"> <!--link styled as a small green button, leading to the add workout page-->
-                    <i class="fas fa-plus-circle"></i> Create Workout Tracker 
+                    <i class="fas fa-plus-circle"></i> Create Workout Tracker <!--button text with an icon for creating a new workout entry-->
                 </a>
             </div>
-            <!-- Workout List Table --> 
+
+            <!-- Workout List Table --> <!--indicates the start of the table section for displaying workout entries-->
+            <table class="table table-bordered table-striped table-hover" style="box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);"> <!--creates a styled table with borders, striped rows, hover effect, and shadow-->
                 <thead class="bg-primary text-white"> <!--defines the table header with blue background and white text-->
                     <tr class="d-flex"> <!--creates a flexible table row-->
                         <th class="text-center col-1">Name</th> <!--table header for name, centered and with column width of 1-->
