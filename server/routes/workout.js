@@ -4,7 +4,7 @@ let mongoose = require('mongoose');
 // telling my router that I have this model
 let Workout = require('../model/workout.js');
 const workout = require('../model/workout.js');
-let workoutController = require('../controllers/workout.js') //surveyController --> workoutController
+let workoutController = require('../controllers/workout.js') 
 /* Get route for the workout list - Read Operation */
 /*
 GET,
@@ -14,9 +14,9 @@ Put --> Edit/Update
 /* Read Operation --> Get route for displaying the workout list */
 router.get('/',async(req,res,next)=>{
 try{
-    const WorkoutList = await Workout.find(); //SurveyList --> WorkoutList, Survey --> Workout
+    const WorkoutList = await Workout.find(); 
     res.render('Workout/list',{
-        title:'Workout Tracker', //Surveys --> Workout Tracker
+        title:'Workout Tracker',
         WorkoutList:WorkoutList
     })}
     catch(err){
@@ -44,7 +44,7 @@ router.get('/add',async(req,res,next)=>{
 /* Create Operation --> Post route for processing the Add Page */
 router.post('/add',async(req,res,next)=>{
     try{
-        let newWorkout = Workout({ // newSurvey --> newWorkout
+        let newWorkout = Workout({ 
             "Name":req.body.Name,
             "WorkoutType":req.body.WorkoutType,
             "ExerciseDetails":req.body.ExerciseDetails,
@@ -68,7 +68,7 @@ router.post('/add',async(req,res,next)=>{
 router.get('/edit/:id',async(req,res,next)=>{
     try{
         const id = req.params.id;
-        const workoutToEdit = await Workout.findById(id); //surveyToEdit --> workoutToEdit
+        const workoutToEdit = await Workout.findById(id); 
         res.render('Workout/edit',
             {
                 title:'Edit Workout Tracker',
@@ -86,7 +86,7 @@ router.get('/edit/:id',async(req,res,next)=>{
 router.post('/edit/:id',async(req,res,next)=>{
     try{
         let id=req.params.id;
-        let updatedWorkout = Workout({ //updatedSurvey --> updatedWorkout
+        let updatedWorkout = Workout({ 
             "_id":id,
             "Name":req.body.Name,
             "WorkoutType":req.body.WorkoutType,
