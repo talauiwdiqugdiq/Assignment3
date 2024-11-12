@@ -1,24 +1,25 @@
-<!--NavBar-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<!-- NavBar -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#666a6e;">
   <div class="container-fluid">
-      <a class="navbar-brand" href="/">
-        <i class="fa-solid fa-dumbbell"></i> Workout Tracker Form</a>
-  </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <% if(title=="Workout Tracker") { %>
-              <a class="nav-link active" href="/workoutlist">
-            <% } else {%>
-              <a class="nav-link" href="/workoutlist">
-            <% } %>  
-            <i class="fa-solid fa-book"></i> Workout Tracker</a>
-
-          </li>
-        </ul>
-      </div>
+    <a class="navbar-brand" href="/" style="color: white; font-weight: bold;">
+      <i class="fa-solid fa-dumbbell"></i> Workout Tracker Form
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <% if(title == "Workout Tracker") { %>
+            <a class="nav-link active" href="/workoutlist" style="color: white; font-weight: bold;">
+          <% } else { %>
+            <a class="nav-link" href="/workoutlist" style="color: white; font-weight: bold;">
+          <% } %>  
+          <i class="fa-solid fa-book"></i> Workout Tracker</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
