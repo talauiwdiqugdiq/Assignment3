@@ -92,8 +92,7 @@ router.post('/edit/:id',async(req,res,next)=>{
             "WorkoutType":req.body.WorkoutType,
             "ExerciseDetails":req.body.ExerciseDetails,
             "Duration":req.body.Duration,
-            "PerformanceRating":req.body.PerformanceRating,
-            "FitnessGoalSetting":req.body.FitnessGoalSetting
+            "PerformanceRating":req.body.PerformanceRating
         });
         Workout.findByIdAndUpdate(id,updatedWorkout).then(()=>{
             res.redirect('/workoutlist')

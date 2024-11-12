@@ -1,9 +1,9 @@
-<%- include('Partials/header'); -%>
-<%- include('Partials/main_nav'); -%>
+<%- include('../Partials/header'); -%>
+<%- include('../Partials/main_nav'); -%>
 <!-- Content for the edit Operation -->
 <div class="container"></div>
     <div class="row">
-        <div class="offset-md-3 col-md-7">
+        <div class="offset-md-3 col-md-6">
             <h1><%= title %></h1>
             <form class="form" method="POST">
                 <div class="form-group">
@@ -16,19 +16,15 @@
                 </div>
                 <div class="form-group">
                     <label for="exerciseDetailsTextArea">Which exercises did you perform, and how many sets/reps did you complete?</label>
-                    <input type="text" class="form-control" id="exerciseDetailsTextArea"  placeholder="Enter Exercise Details" name="ExerciseDetails" value="<%= Workout.ExerciseDetails %>" required>
+                    <textarea type="text" class="form-control" id="exerciseDetailsTextArea"  placeholder="Enter Exercise Details" name="ExerciseDetails" required><%= Workout.ExerciseDetails %></textarea>
                 </div>
                 <div class="form-group">
                     <label for="durationTextField">How long was your workout session?</label>
-                    <textarea type="text" class="form-control" id="durationTextField" placeholder="Enter Duration in minutes" name="Duration" required><%= Workout.Duration %></textarea>
+                    <input type="text" class="form-control" id="durationTextField" placeholder="Enter Duration in minutes" name="Duration" value="<%= Workout.Duration %>" required>
                 </div>
                 <div class="form-group">
                     <label for="performanceRatingTextField">How would you rate your performance today on a scale of 1 to 10?</label>
-                    <textarea type="text" class="form-control" id="performanceRatingTextField" placeholder="Enter a number from 1-10" name="PerformanceRating" required><%= Workout.PerformanceRating %></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="fitnessGoalSettingTextArea">Would you like to set a fitness goal for this week?</label>
-                    <input type="text" class="form-control" id="fitnessGoalSettingTextArea"  placeholder="Enter Yes or No" name="FitnessGoalSetting" value="<%= Workout.FitnessGoalSetting %>" required>
+                    <input type="text" class="form-control" id="performanceRatingTextField" placeholder="Enter a number from 1-10" name="PerformanceRating" value="<%= Workout.PerformanceRating %>" required>
                 </div>
                 <button class="btn btn-primary" type="submit">Submit
                 <i class="fas fa-edit"></i></button>  
@@ -38,4 +34,4 @@
         </div>
     </div>
 </div>
-<%- include('Partials/footer'); -%>
+<%- include('../Partials/footer'); -%>

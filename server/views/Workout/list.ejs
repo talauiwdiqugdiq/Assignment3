@@ -1,9 +1,9 @@
-<%- include('Partials/header'); -%>
-<%- include('Partials/main_nav'); -%>
+<%- include('../Partials/header'); -%>
+<%- include('../Partials/main_nav'); -%>
 <!--Survey Database-->
 <main class="container">
     <div class="row">
-        <div class="offset-md-1 col-md-17">
+        <div class="offset-md-1 col-md-11">
             <h1><%= title %></h1>
             <br>
             <a href="/workoutlist/add" class="btn btn-primary" role="button">
@@ -11,38 +11,50 @@
             </a>
             <table class="table table-bordered table-striped table-hover">
                 <tr class="d-flex">
-                    <th class="text-center col-2">Name</th>
+                    <th class="text-center col-1">Name</th>
                     <th class="text-center col-2">Workout Type</th>
                     <th class="text-center col-3">Exercise Details</th>
-                    <th class="text-center col-2">Duration</th>
-                    <th class="text-center col-3">Performance Rating</th>
-                    <th class="text-center col-3">Fitness Goal Setting</th>
+                    <th class="text-center col-1">Duration</th>
+                    <th class="text-center col-2">Performance Rating</th>
                     <th class="text-center col-2">Actions</th>
                 </tr>
-                <% for(let count=0;count<SurveyList.length;count++) { %>
+                <% for(let count=0;count<WorkoutList.length;count++) { %>
                 <tr class="d-flex">
-                    <td class="text-center col-2"><%= SurveyList[count].Name %></td>
-                    <td class="text-center col-2"><%= SurveyList[count].WorkoutType %></td>
-                    <td class="text-center col-3"><%= SurveyList[count].ExerciseDetails %></td>
-                    <td class="text-center col-2"><%= SurveyList[count].Duration %> </td>
-                    <td class="text-center col-3"><%= SurveyList[count].PerformanceRating %></td>
-                    <td class="text-center col-3"><%= SurveyList[count].FitnessGoalSetting %></td>
-                    <td class="text-center col-2">
+                    <td class="text-center col-1"><%= WorkoutList[count].Name %></td>
+                    <td class="text-center col-2"><%= WorkoutList[count].WorkoutType %></td>
+                    <td class="text-center col-3"><%= WorkoutList[count].ExerciseDetails %></td>
+                    <td class="text-center col-1"><%= WorkoutList[count].Duration %> </td>
+                    <td class="text-center col-2"><%= WorkoutList[count].PerformanceRating %></td>
+                    <td class="text-center col-1">
                         <a href="/workoutlist/edit/<%= WorkoutList[count]._id%>"
                             class="btn btn-primary btn-sm">
-                        <i class="fas fa-pencil-alt"></i>Edit
-                    </a>
+                            <i class="fas fa-pencil-alt"></i>Edit
+                        </a>
                     </td>
                     <td class="text-center col-1">
+                        <!--add the delete confirmation functionality here-->
                         <a href="/workoutlist/delete/<%= WorkoutList[count]._id%>"
-                            class="btn btn-danger btn-sm">
-                        <i class="fas fa-trash-alt"></i>Delete
-                    </a>
+                            class="btn btn-danger btn-sm" onclick="return confirmDelete()">
+                            <i class="fas fa-trash-alt"></i>Delete
+                        </a>
                     </td>
                 </tr>    
-                    <%} %>
+                <% } %>
             </table>
         </div>
     </div>
 </main>
-<%- include('Partials/footer'); -%>
+
+<!--using javaScript for delete confirmation-->
+<script>
+    //the function shows the confirmation message before deleting
+    function confirmDelete() {
+        var confirmation = confirm("Are you sure you want to delete this workout entry?");
+        if (confirmation) {
+            return true;  //proceed with the deletion
+        } else {
+            return false; //cancel the deletion
+        }
+    }
+</script>
+<%- include('../Partials/footer'); -%>

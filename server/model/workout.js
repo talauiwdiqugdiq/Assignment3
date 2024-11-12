@@ -7,8 +7,7 @@ let workoutModel = mongoose.Schema({
     WorkoutType: String,
     ExerciseDetails: String,
     Duration: Number,
-    PerformanceRating: Number,
-    FitnessGoalSetting: String
+    PerformanceRating: Number
 },
 
 {
