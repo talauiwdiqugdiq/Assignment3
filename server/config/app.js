@@ -6,8 +6,8 @@ let logger = require('morgan');
 
 let app = express();
 //let indexRouter = require('../routes/index');
-let indexRouter = require('../routes/survey');
-let surveyRouter = require('../routes/survey');
+let indexRouter = require('../routes/workout'); //survey --> workout,
+let surveyRouter = require('../routes/workout');
 
 
 //view engine setup
@@ -33,7 +33,8 @@ app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
 
 app.use('/', indexRouter);
-app.use('/surveyslist',surveyRouter);
+app.use('/workoutlist',workoutRouter); // surveyslist --> workoutlist 
+// surveyRouter --> workoutRouter
 
 //catch 404 and forward to error handler
 app.use(function(req, res, next) {

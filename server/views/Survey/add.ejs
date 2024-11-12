@@ -1,5 +1,5 @@
-<%- include ../Partials/header.ejs%>
-<%- include ../Partials/main_nav.ejs%>
+<%- include('Partials/header'); -%>
+<%- include('Partials/main_nav'); -%>
 <!-- Content for Add Page -->
 <div class="container">
     <div class="row">
@@ -11,20 +11,24 @@
                     <input type="text" class="form-control" id="nameTextField" placeholder="Enter Your Name" name="Name" required>
                 </div>
                 <div class="form-group">
-                    <label for="authorTextField">Job Title</label>
-                    <input type="text" class="form-control" id="authorTextField" placeholder="Enter the Job Title" name="JobTitle" required>
+                    <label for="workoutTypeTextField">What type of workout did you complete today?</label>
+                    <input type="text" class="form-control" id="workoutTypeTextField" placeholder="Enter the Workout Type" name="WorkoutType" required>
                 </div>
                 <div class="form-group">
-                    <label for="publishedTextField">Are you satisfied with your job?</label>
-                    <input type="text" class="form-control" id="publishedTextField" placeholder="Enter Yes or No" name="Satisfaction" required>
+                    <label for="exerciseDetailsTextArea">Which exercises did you perform, and how many sets/reps did you complete?</label>
+                    <input type="text" class="form-control" id="exerciseDetailsTextArea"  placeholder="Enter Exercise Details" name="ExerciseDetails" required>
                 </div>
                 <div class="form-group">
-                    <label for="descriptionTextArea">How long have you been with the company?</label>
-                    <input type="text" class="form-control" id="descriptionTextArea"  placeholder="Enter the Duration of Employment in years" name="DurationOfEmployment" required>
-                <div class="form-group">
-                    <label for="priceTextField">What changes would improve your job satisfaction?</label>
-                    <textarea type="text" class="form-control" id="priceTextField" placeholder="Describe the suggested improvement" name="Improvments" required></textarea>
+                    <label for="durationTextField">How long was your workout session?</label>
+                    <textarea type="text" class="form-control" id="durationTextField" placeholder="Enter Duration in minutes" name="Duration" required></textarea>
                 </div>
+                <div class="form-group">
+                    <label for="performanceRatingTextField">How would you rate your performance today on a scale of 1 to 10?</label>
+                    <textarea type="text" class="form-control" id="performanceRatingTextField" placeholder="Enter a number from 1-10" name="PerformanceRating" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="fitnessGoalSettingTextArea">Would you like to set a fitness goal for this week?</label>
+                    <input type="text" class="form-control" id="fitnessGoalSettingTextArea"  placeholder="Enter Yes or No" name="FitnessGoalSetting" required>
                 </div>
                 <button class="btn btn-primary" type="submit">Submit
                 <i class="fas fa-edit"></i></button>  
@@ -34,4 +38,4 @@
         </div>
     </div>
 </div>
-<%- include ../Partials/footer.ejs%>
+<%- include('Partials/footer'); -%>
