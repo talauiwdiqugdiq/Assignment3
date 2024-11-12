@@ -7,7 +7,7 @@ let logger = require('morgan');
 let app = express();
 //let indexRouter = require('../routes/index');
 let indexRouter = require('../routes/workout'); //survey --> workout,
-let surveyRouter = require('../routes/workout');
+let workoutRouter = require('../routes/workout');
 
 
 //view engine setup
