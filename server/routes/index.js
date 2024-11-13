@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('home', { title: 'Home' });
 });
-/* GET home page. */
+/* GET home page. */ssss
 router.get('/home', function(req, res, next) {
   res.render('home', { title: 'Home' });
 });
