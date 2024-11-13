@@ -14,5 +14,4 @@ let workoutModel = mongoose.Schema({
     collection:"Workout_tracker"
 });
 module.exports =mongoose.model('Workout',workoutModel);
-//Survey --> Workout
-//surveyModel --> workoutModel
+

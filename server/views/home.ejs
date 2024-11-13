@@ -1,0 +1,58 @@
+<%- include('../Partials/header'); -%> <!-- Include the header partial -->
+<%- include('../Partials/main_nav'); -%> <!-- Include the main navigation partial -->
+
+<!-- Home Page Content -->
+<div class="container my-5">
+    <div class="text-center">
+        <h1 class="display-4" style="color: #1a73e8;">Welcome to Your Workout Tracker!</h1> <!-- Main Title -->
+        <p class="lead mb-4" style="color: #555;">Track your fitness journey, analyze your progress, and achieve your goals!</p>
+        
+        <!-- Features Section -->
+        <div class="row my-5">
+            <!-- Add Workout Card -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-plus-circle fa-3x mb-3" style="color: #28a745;"></i>
+                        <h5 class="card-title">Add New Workout</h5>
+                        <p class="card-text">Log your workouts and keep track of your exercises with ease.</p>
+                        <a href="/workouts/add" class="btn btn-success btn-sm" style="border-radius: 8px;">Add Workout</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View Workout List Card -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-list-alt fa-3x mb-3" style="color: #007bff;"></i>
+                        <h5 class="card-title">View Workouts</h5>
+                        <p class="card-text">See your complete list of workouts and track your progress over time.</p>
+                        <a href="/workoutlist" class="btn btn-primary btn-sm" style="border-radius: 8px;">View Workouts</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Insights & Stats Card -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-chart-line fa-3x mb-3" style="color: #ffc107;"></i>
+                        <h5 class="card-title">Progress Insights</h5>
+                        <p class="card-text">Analyze your performance and see trends in your workout routine.</p>
+                        <a href="/insights" class="btn btn-warning btn-sm" style="border-radius: 8px;">View Insights</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Motivational Section -->
+        <div class="mt-5">
+            <h3 style="color: #1a73e8;">Stay Consistent, Stay Strong!</h3>
+            <p class="text-muted">"The only bad workout is the one you didn't do."</p>
+            <a href="/workouts/add" class="btn btn-outline-primary btn-sm" style="border-radius: 8px;">Start Now</a>
+        </div>
+    </div>
+</div>
+
+<%- include('../Partials/footer'); -%> <!-- Include the footer partial -->
