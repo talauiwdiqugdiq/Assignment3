@@ -1,17 +1,19 @@
-//const { Collection, default: mongoose } = require("mongoose");
-
+// importing the mongoose library to interact with MongoDB
 const mongoose = require("mongoose");
 
-let workoutModel = mongoose.Schema({
-    Name: String,
-    WorkoutType: String,
-    ExerciseDetails: String,
-    Duration: Number,
-    PerformanceRating: Number
-},
+// defining the schema for the workout model
+let workoutModel = mongoose.Schema(
+  {
+    Name: String,              // field for the name of the workout (string type)
+    WorkoutType: String,       // field for the type of workout 
+    ExerciseDetails: String,   // field for additional details or exercises involved
+    Duration: Number,          // field for duration of the workout in minutes (number type)
+    PerformanceRating: Number  // field for rating the performance (number type)
+  },
+  {
+    collection: "Workout_tracker" // specifying the MongoDB collection name
+  }
+);
 
-{
-    collection:"Workout_tracker"
-});
-module.exports =mongoose.model('Workout',workoutModel);
-
+// exporting the model to be used in other parts of the application
+module.exports = mongoose.model('Workout', workoutModel);
