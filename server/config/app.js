@@ -22,7 +22,6 @@ let DB = require('./db'); // importing the database configuration (URI)
 
 // connecting Mongoose to the MongoDB URI
 mongoose.connect(DB.URI);
-
 // handling MongoDB connection events
 let mongoDB = mongoose.connection;
 mongoDB.on('error', console.error.bind(console, 'Connection Error')); // logs error if connection fails
